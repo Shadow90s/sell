@@ -2,7 +2,7 @@
  * @Author: 2273730450@qq.com 
  * @Date: 2018-12-18 10:22:37 
  * @Last Modified by: shadowRen
- * @Last Modified time: 2018-12-18 19:10:52
+ * @Last Modified time: 2018-12-26 18:18:24
  */
 <template>
   <div id="app">
@@ -32,7 +32,7 @@
     name: 'App',
     data() {
       return{
-        seller:{}
+        seller:{} 
       }
       
     },
@@ -41,8 +41,6 @@
         if(res.body.errno === ERR_OK){
           this.seller = res.body.data;
         }
-        
-        console.log(res,'999999999999')
         console.log(this.seller,'res')
       })
     },

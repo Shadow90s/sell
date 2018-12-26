@@ -2,7 +2,7 @@
  * @Author: 2273730450@qq.com 
  * @Date: 2018-12-18 10:09:59 
  * @Last Modified by: shadowRen
- * @Last Modified time: 2018-12-18 14:17:14
+ * @Last Modified time: 2018-12-26 18:28:07
  */
 
 <template>
@@ -24,20 +24,26 @@
           <span class="text">{{seller.supports[0].description}}</span>
         </div> 
       </div>
+      <div v-if="seller.supports" class="support-count">
+        <span class="count">{{seller.supports.length}}</span>
+      </div>
     </div>
     <div class="bulletin-wrapper"></div>
   </div>
 </template>
 
 <script>
-export default {
-  data () {
-    return {
-            
+  export default {
+    data () {
+        return {
+                
+        }
+    },
+    props:['seller'],
+    mounted(){
+      console.log(this.seller,'this.seller')
     }
-  },
-  props:['seller']
-}
+  }
 
 </script>
 <style lang='scss'>
